@@ -1,4 +1,6 @@
 ﻿using System;
+using BenchmarkDotNet.Reports;
+using BenchmarkDotNet.Running;
 
 namespace DictionaryBenchmark
 {
@@ -6,7 +8,8 @@ namespace DictionaryBenchmark
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Summary summary = BenchmarkRunner.Run<Bench>();
+            Console.ReadLine();
         }
     }
 }
